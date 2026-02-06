@@ -158,6 +158,7 @@ void saturn_cd_hle_device::device_start()
 	save_item(NAME(buffull));
 	save_item(NAME(sectorstore));
 	save_item(NAME(freeblocks));
+	save_item(NAME(buffull_temp_pause));
 	save_item(NAME(cur_track));
 	save_item(NAME(cmd_pending));
 	save_item(NAME(cd_speed));
