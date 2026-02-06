@@ -123,6 +123,10 @@ void saturn_cd_hle_device::device_start()
 	m_sh1_timer = timer_alloc(FUNC(saturn_cd_hle_device::sh1_command_cb), this);
 	m_sector_timer = timer_alloc(FUNC(saturn_cd_hle_device::cd_sector_cb), this);
 
+	save_item(NAME(tocbuf));
+	save_item(NAME(subqbuf));
+	save_item(NAME(subrwbuf));
+	save_item(NAME(finfbuf));
 	save_item(NAME(sectlenin));
 	save_item(NAME(sectlenout));
 	save_item(NAME(lastbuf));
