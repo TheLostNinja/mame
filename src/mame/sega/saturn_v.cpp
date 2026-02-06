@@ -8564,14 +8564,14 @@ int saturn_state::vdp2_start()
 	save_pointer(NAME(m_vdp2_regs), 0x040000/2);
 	save_pointer(NAME(m_vdp2_vram), 0x100000/4);
 	save_pointer(NAME(m_vdp2_cram), 0x080000/4);
-	save_item(NAME(dotsel));
-	save_item(NAME(odd));
-	save_item(NAME(h_count));
-	save_item(NAME(v_count));
-	save_item(NAME(exltfg));
-	save_item(NAME(exsyfg));
-	save_item(NAME(old_crmd));
-	save_item(NAME(old_tvmd));
+	save_item(NAME(m_vdp2.dotsel));
+	save_item(NAME(m_vdp2.odd));
+	save_item(NAME(m_vdp2.h_count));
+	save_item(NAME(m_vdp2.v_count));
+	save_item(NAME(m_vdp2.exltfg));
+	save_item(NAME(m_vdp2.exsyfg));
+	save_item(NAME(m_vdp2.old_crmd));
+	save_item(NAME(m_vdp2.old_tvmd));
 	machine().save().register_postload(save_prepost_delegate(FUNC(saturn_state::vdp2_state_save_postload), this));
 
 	return 0;
