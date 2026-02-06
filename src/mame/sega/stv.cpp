@@ -345,6 +345,8 @@ void stv_state::install_common_protection()
 
 void stv_state::stv_register_protection_savestates()
 {
+	save_item(NAME(m_abus_protenable));
+	save_item(NAME(m_abus_protkey));
 	save_item(NAME(m_a_bus));
 }
 
@@ -1352,6 +1354,11 @@ void stv_state::machine_start()
 	save_item(NAME(m_prev_gamebank_select));
 	save_item(NAME(m_port_sel));
 	save_item(NAME(m_mux_data));
+	save_item(NAME(m_system_output));
+	save_item(NAME(m_ioga_mode));
+	save_item(NAME(m_ioga_portg));
+	save_item(NAME(m_ioga_count));
+	save_item(NAME(m_serial_tx));
 	save_item(NAME(m_scsp_last_line));
 	save_item(NAME(m_vdp2.odd));
 
