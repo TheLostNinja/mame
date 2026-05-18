@@ -78,6 +78,7 @@ void paula_device::device_start()
 	save_pointer(STRUCT_MEMBER(m_channel, len), 4);
 	save_pointer(STRUCT_MEMBER(m_channel, per), 4);
 	save_pointer(STRUCT_MEMBER(m_channel, vol), 4);
+	save_pointer(STRUCT_MEMBER(m_channel, dat), 4);
 	save_pointer(STRUCT_MEMBER(m_channel, curticks), 4);
 	save_pointer(STRUCT_MEMBER(m_channel, manualmode), 4);
 	save_pointer(STRUCT_MEMBER(m_channel, curlocation), 4);
@@ -85,6 +86,7 @@ void paula_device::device_start()
 	save_pointer(STRUCT_MEMBER(m_channel, dma_enabled), 4);
 	save_pointer(STRUCT_MEMBER(m_channel, atper), 4);
 	save_pointer(STRUCT_MEMBER(m_channel, atvol), 4);
+	save_item(NAME(m_dma_master_enable));
 }
 
 void paula_device::device_reset()
