@@ -161,6 +161,15 @@ void amiga_state::machine_start()
 
 	// start the scanline timer
 	m_scanline_timer->adjust(m_screen->time_until_pos(0));
+
+	save_item(NAME(m_sprite_comparitor_enable_mask));
+	save_item(NAME(m_sprite_dma_reload_mask));
+	save_item(NAME(m_sprite_dma_live_mask));
+	save_item(NAME(m_sprite_ctl_written));
+	save_item(NAME(m_sprite_shiftreg));
+	save_item(NAME(m_sprite_remain));
+	save_item(NAME(m_last_scanline));
+	save_item(NAME(m_genlock_color));
 }
 
 void amiga_state::m68k_reset(int state)
