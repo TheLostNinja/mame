@@ -76,6 +76,16 @@ void paula_fdc_device::device_start()
 	floppy = nullptr;
 
 	t_gen = timer_alloc(FUNC(paula_fdc_device::update_tick), this);
+
+	save_item(NAME(dsklen));
+	save_item(NAME(pre_dsklen));
+	save_item(NAME(dsksync));
+	save_item(NAME(dskbyt));
+	save_item(NAME(adkcon));
+	save_item(NAME(dmacon));
+	save_item(NAME(dskpt));
+	save_item(NAME(dma_value));
+	save_item(NAME(dma_state));
 }
 
 void paula_fdc_device::device_reset()
