@@ -171,9 +171,25 @@ void amiga_state::machine_start()
 	save_item(NAME(m_last_scanline));
 	save_item(NAME(m_ham_color));
 	save_item(NAME(m_genlock_color));
+	save_item(NAME(m_aga_palette));
+	save_item(NAME(m_aga_ehb_palette));
+	save_item(NAME(m_aga_sprdata));
+	save_item(NAME(m_aga_sprdatb));
+	save_item(NAME(m_aga_sprite_fetched_words));
+	save_item(NAME(m_aga_sprite_dma_used_words));
+	save_item(NAME(m_aga_clxcon2));
 	save_item(NAME(m_cia_0_irq));
 	save_item(NAME(m_cia_1_irq));
 	save_item(NAME(m_custom_regs));
+	save_item(NAME(m_pot0x));
+	save_item(NAME(m_pot1x));
+	save_item(NAME(m_pot0y));
+	save_item(NAME(m_pot1y));
+	save_item(NAME(m_pot0dat));
+	save_item(NAME(m_pot1dat));
+	save_item(NAME(m_gayle_reset));
+	save_item(NAME(m_diwhigh_valid));
+	save_item(NAME(m_previous_lof));
 }
 
 void amiga_state::m68k_reset(int state)
