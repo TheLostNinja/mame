@@ -169,6 +169,7 @@ void amiga_state::machine_start()
 	save_item(NAME(m_sprite_shiftreg));
 	save_item(NAME(m_sprite_remain));
 	save_item(NAME(m_last_scanline));
+	save_item(NAME(m_ham_color));
 	save_item(NAME(m_genlock_color));
 	save_item(NAME(m_cia_0_irq));
 	save_item(NAME(m_cia_1_irq));
